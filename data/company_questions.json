@@ -116,5 +116,155 @@
       ],
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock"
     }
-  ]
+  ],
+  "Accenture" : [
+  {
+    "id": "14",
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "topics": ["Array", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock"
+  },
+  {
+    "id": "15",
+    "title": "Maximum Subarray",
+    "difficulty": "Medium",
+    "topics": ["Array", "Divide and Conquer", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/maximum-subarray"
+  },
+  {
+    "id": "16",
+    "title": "Move Zeroes",
+    "difficulty": "Easy",
+    "topics": ["Array", "Two Pointers"],
+    "url": "https://leetcode.com/problems/move-zeroes"
+  },
+  {
+    "id": "17",
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "topics": ["Array", "Depth-First Search", "Breadth-First Search", "Union Find", "Matrix"],
+    "url": "https://leetcode.com/problems/number-of-islands"
+  },
+  {
+    "id": "18",
+    "title": "Divide Nodes Into the Maximum Number of Groups",
+    "difficulty": "Hard",
+    "topics": ["Depth-First Search", "Breadth-First Search", "Union Find", "Graph"],
+    "url": "https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups"
+  },
+  {
+    "id": "19",
+    "title": "Fibonacci Number",
+    "difficulty": "Easy",
+    "topics": ["Math", "Dynamic Programming", "Recursion", "Memoization"],
+    "url": "https://leetcode.com/problems/fibonacci-number"
+  },
+  {
+    "id": "20",
+    "title": "Majority Element",
+    "difficulty": "Easy",
+    "topics": ["Array", "Hash Table", "Divide and Conquer", "Sorting", "Counting"],
+    "url": "https://leetcode.com/problems/majority-element"
+  },
+  {
+    "id": "21",
+    "title": "Intersection of Two Arrays",
+    "difficulty": "Easy",
+    "topics": ["Array", "Hash Table", "Two Pointers", "Binary Search", "Sorting"],
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays"
+  },
+  {
+    "id": "22",
+    "title": "Koko Eating Bananas",
+    "difficulty": "Medium",
+    "topics": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/koko-eating-bananas"
+  },
+  {
+    "id": "23",
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "topics": ["Math", "Dynamic Programming", "Memoization"],
+    "url": "https://leetcode.com/problems/climbing-stairs"
+  },
+  {
+    "id": "24",
+    "title": "Bulb Switcher",
+    "difficulty": "Medium",
+    "topics": ["Math", "Brainteaser"],
+    "url": "https://leetcode.com/problems/bulb-switcher"
+  },
+  {
+    "id": "25",
+    "title": "Happy Number",
+    "difficulty": "Easy",
+    "topics": ["Hash Table", "Math", "Two Pointers"],
+    "url": "https://leetcode.com/problems/happy-number"
+  },
+  {
+    "id": "26",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "topics": ["Array", "Hash Table"],
+    "url": "https://leetcode.com/problems/two-sum"
+  },
+  {
+    "id": "27",
+    "title": "Palindrome Number",
+    "difficulty": "Easy",
+    "topics": ["Math"],
+    "url": "https://leetcode.com/problems/palindrome-number"
+  },
+  {
+    "id": "28",
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "topics": ["Array", "Math", "Two Pointers"],
+    "url": "https://leetcode.com/problems/rotate-array"
+  },
+  {
+    "id": "29",
+    "title": "Delete and Earn",
+    "difficulty": "Medium",
+    "topics": ["Array", "Hash Table", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/delete-and-earn"
+  },
+  {
+    "id": "30",
+    "title": "Roman to Integer",
+    "difficulty": "Easy",
+    "topics": ["Hash Table", "Math", "String"],
+    "url": "https://leetcode.com/problems/roman-to-integer"
+  },
+  {
+    "id": "31",
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "topics": ["String", "Trie"],
+    "url": "https://leetcode.com/problems/longest-common-prefix"
+  },
+  {
+    "id": "32",
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "topics": ["Two Pointers", "String", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/longest-palindromic-substring"
+  },
+  {
+    "id": "33",
+    "title": "Reverse Integer",
+    "difficulty": "Easy",
+    "topics": ["Math"],
+    "url": "https://leetcode.com/problems/reverse-integer"
+  }
+]
+
+  
+    
+
+
+
+
+
 }
