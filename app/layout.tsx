@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'LeetCompanyTracker',
+  title: 'CodeTrail',
   description: 'Track LeetCode questions company-wise with filters, checklists, and progress.',
   keywords: ['leetcode', 'interview prep', 'company-wise questions', 'checklist', 'DSA', 'tracker'],
   authors: [{ name: 'Nehardh M', url: 'https://github.com/nehardh' }],
