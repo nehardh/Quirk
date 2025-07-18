@@ -1,0 +1,120 @@
+{
+  "Amd": [
+    {
+      "id": "1",
+      "title": "Spiral Matrix",
+      "difficulty": "Medium",
+      "topics": ["Array", "Matrix", "Simulation"],
+      "url": "https://leetcode.com/problems/spiral-matrix"
+    },
+    {
+      "id": "2",
+      "title": "Rotate Image",
+      "difficulty": "Medium",
+      "topics": ["Array", "Math", "Matrix"],
+      "url": "https://leetcode.com/problems/rotate-image"
+    },
+    {
+      "id": "3",
+      "title": "Number of 1 Bits",
+      "difficulty": "Easy",
+      "topics": ["Divide and Conquer", "Bit Manipulation"],
+      "url": "https://leetcode.com/problems/number-of-1-bits"
+    },
+    {
+      "id": "4",
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "topics": ["Math", "Dynamic Programming", "Memoization"],
+      "url": "https://leetcode.com/problems/climbing-stairs"
+    },
+    {
+      "id": "5",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topics": ["Array", "Hash Table"],
+      "url": "https://leetcode.com/problems/two-sum"
+    },
+    {
+      "id": "6",
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "topics": ["Hash Table", "String", "Sliding Window"],
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters"
+    },
+    {
+      "id": "7",
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "topics": ["Array", "Two Pointers", "Sorting"],
+      "url": "https://leetcode.com/problems/3sum"
+    },
+    {
+      "id": "8",
+      "title": "Kth Largest Element in an Array",
+      "difficulty": "Medium",
+      "topics": ["Array", "Divide and Conquer", "Sorting", "Heap (Priority Queue)", "Quickselect"],
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array"
+    },
+    {
+      "id": "9",
+      "title": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "topics": ["Array", "Hash Table", "Prefix Sum"],
+      "url": "https://leetcode.com/problems/subarray-sum-equals-k"
+    },
+    {
+      "id": "10",
+      "title": "Roman to Integer",
+      "difficulty": "Easy",
+      "topics": ["Hash Table", "Math", "String"],
+      "url": "https://leetcode.com/problems/roman-to-integer"
+    },
+    {
+      "id": "11",
+      "title": "Merge Intervals",
+      "difficulty": "Medium",
+      "topics": ["Array", "Sorting"],
+      "url": "https://leetcode.com/problems/merge-intervals"
+    }
+  ],
+  "Aqr": [
+    {
+      "id": "11",
+      "title": "Jump Game VI",
+      "difficulty": "Medium",
+      "topics": [
+        "Array",
+        "Dynamic Programming",
+        "Queue",
+        "Heap (Priority Queue)",
+        "Monotonic Queue"
+      ],
+      "url": "https://leetcode.com/problems/jump-game-vi"
+    },
+    {
+      "id": "12",
+      "title": "Missing Number",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "url": "https://leetcode.com/problems/missing-number"
+    },
+    {
+      "id": "13",
+      "title": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "topics": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock"
+    }
+  ]
+}
