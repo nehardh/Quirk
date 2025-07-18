@@ -45,13 +45,13 @@ export default function AuthButton() {
   return (
     <div className="flex items-center space-x-3">
       <ThemeToggle />
-    <Button
+    {/* <Button
       onClick={() => signIn()}
       className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700"
     >
       <LogIn className="w-4 h-4" />
       <span>Sign In</span>
-    </Button>
+    </Button> */}
     </div>
   )
 }

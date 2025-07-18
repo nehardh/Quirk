@@ -31,8 +31,12 @@ export default function CompanyPage() {
   const [selectedTopic, setSelectedTopic] = useState('all')
   const [selectedStatus, setSelectedStatus] = useState('all')
 
-  const questions: Question[] = companyName ? 
-    (companyData[companyName.charAt(0).toUpperCase() + companyName.slice(1) as keyof typeof companyData] || []) : []
+const questions: Question[] = companyName
+  ? (companyData[companyName.charAt(0).toUpperCase() + companyName.slice(1) as keyof typeof companyData] || []).map(q => ({
+      ...q,
+      difficulty: q.difficulty as 'Easy' | 'Medium' | 'Hard',
+    }))
+  : []
 
   useEffect(() => {
     if (!companyName) return

@@ -70,29 +70,41 @@ export default function Home() {
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Master Technical Interviews
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-              Track your progress on LeetCode questions asked by top tech companies. 
-              Stay organized and ace your next interview.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Star className="w-5 h-5 text-yellow-500" />
-                <span>Company-specific questions</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5 text-green-500" />
-                <span>Progress tracking</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Code className="w-5 h-5 text-blue-500" />
-                <span>Difficulty categorization</span>
-              </div>
-            </div>
-          </div>
+  <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+    Master Technical Interviews
+  </h2>
+  <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
+    Track your progress on LeetCode questions asked by top tech companies. 
+    Stay organized and ace your next interview.
+  </p>
+
+  {/* Info Instead of Sign In / Button */}
+  <p className="text-md text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+    <span className="bg-green-200 text-black px-1 rounded pr-2 mr-1">{'{'}</span>
+    <span className="bg-blue-100 text-black px-2 rounded">
+      Your progress will be stored locally in your browser. <br className="hidden sm:block" />
+      Sign-in is optional and coming soon for syncing across devices. <br className="hidden sm:block" />
+      In the mean time, have fun 😊!
+    </span>
+    <span className="bg-green-200 text-black px-1 rounded pl-2 ml-1">{'}'}</span>
+  </p>
+
+  <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-600 dark:text-gray-400 mt-6">
+    <div className="flex items-center space-x-2">
+      <Star className="w-5 h-5 text-yellow-500" />
+      <span>Company-specific questions</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <TrendingUp className="w-5 h-5 text-green-500" />
+      <span>Progress tracking</span>
+    </div>
+    <div className="flex items-center space-x-2">
+      <Code className="w-5 h-5 text-blue-500" />
+      <span>Difficulty categorization</span>
+    </div>
+  </div>
+</div>
+
 
           {/* Company Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -113,7 +125,7 @@ export default function Home() {
         <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-16 transition-colors">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="text-center text-gray-500 dark:text-gray-400">
-              <p>© 2025 LeetCode Tracker. Built with Next.js and Tailwind CSS.</p>
+              <p>© 2025 CodeTrail. Built with Next.js and Tailwind CSS.</p>
             </div>
           </div>
         </footer>
