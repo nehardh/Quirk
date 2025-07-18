@@ -71,7 +71,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
   <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-    Master Technical Interviews
+    Master Technical Round
   </h2>
   <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
     Track your progress on LeetCode questions asked by top tech companies. 
@@ -81,7 +81,7 @@ export default function Home() {
   {/* Info Instead of Sign In / Button */}
   <p className="text-md text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
     <span className="bg-green-200 text-black px-1 rounded pr-2 mr-1">{'{'}</span>
-    <span className="bg-blue-100 text-black px-2 rounded">
+    <span className="bg-blue-200 text-black px-2 rounded">
       Your progress will be stored locally in your browser. <br className="hidden sm:block" />
       Sign-in is optional and coming soon for syncing across devices. <br className="hidden sm:block" />
       In the mean time, have fun 😊!
