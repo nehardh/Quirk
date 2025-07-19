@@ -41,7 +41,7 @@ export default function FilterBar({
         <div className="py-4 space-y-4">
           {/* Search and Toggle */}
           <div className="flex items-center space-x-4">
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 max-w">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
               <Input
                 placeholder="Search questions..."
