@@ -3772,222 +3772,221 @@
   ],
   "Autodesk": [
   {
-    "id": 564,
+    "id": "564",
     "title": "Number of Subarrays That Match a Pattern I",
     "link": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i",
     "difficulty": "Medium",
     "topics": ["Array", "Rolling Hash", "String Matching", "Hash Function"]
   },
   {
-    "id": 565,
+    "id": "565",
     "title": "Majority Element",
     "link": "https://leetcode.com/problems/majority-element",
     "difficulty": "Easy",
     "topics": ["Array", "Hash Table", "Divide and Conquer", "Sorting", "Counting"]
   },
   {
-    "id": 566,
+    "id": "566",
     "title": "Koko Eating Bananas",
     "link": "https://leetcode.com/problems/koko-eating-bananas",
     "difficulty": "Medium",
     "topics": ["Array", "Binary Search"]
   },
   {
-    "id": 567,
+    "id": "567",
     "title": "Set Matrix Zeroes",
     "link": "https://leetcode.com/problems/set-matrix-zeroes",
     "difficulty": "Medium",
     "topics": ["Array", "Hash Table", "Matrix"]
   },
   {
-    "id": 568,
+    "id": "568",
     "title": "Median of Two Sorted Arrays",
     "link": "https://leetcode.com/problems/median-of-two-sorted-arrays",
     "difficulty": "Hard",
     "topics": ["Array", "Binary Search", "Divide and Conquer"]
   },
   {
-    "id": 569,
+    "id": "569",
     "title": "Elimination Game",
     "link": "https://leetcode.com/problems/elimination-game",
     "difficulty": "Medium",
     "topics": ["Math", "Recursion"]
   },
   {
-    "id": 570,
+    "id": "570",
     "title": "Sort Colors",
     "link": "https://leetcode.com/problems/sort-colors",
     "difficulty": "Medium",
     "topics": ["Array", "Two Pointers", "Sorting"]
   },
   {
-    "id": 571,
+    "id": "571",
     "title": "Maximum Subarray",
     "link": "https://leetcode.com/problems/maximum-subarray",
     "difficulty": "Medium",
     "topics": ["Array", "Divide and Conquer", "Dynamic Programming"]
   },
   {
-    "id": 572,
+    "id": "572",
     "title": "Group Anagrams",
     "link": "https://leetcode.com/problems/group-anagrams",
     "difficulty": "Medium",
     "topics": ["Array", "Hash Table", "String", "Sorting"]
   },
   {
-    "id": 573,
+    "id": "573",
     "title": "Sliding Window Maximum",
     "link": "https://leetcode.com/problems/sliding-window-maximum",
     "difficulty": "Hard",
     "topics": ["Array", "Queue", "Sliding Window", "Heap (Priority Queue)", "Monotonic Queue"]
   },
   {
-    "id": 574,
+    "id": "574",
     "title": "Combination Sum",
     "link": "https://leetcode.com/problems/combination-sum",
     "difficulty": "Medium",
     "topics": ["Array", "Backtracking"]
   },
   {
-    "id": 575,
+    "id": "575",
     "title": "Number of Changing Keys",
     "link": "https://leetcode.com/problems/number-of-changing-keys",
     "difficulty": "Easy",
     "topics": ["String"]
   },
   {
-    "id": 576,
+    "id": "576",
     "title": "Number of Subarrays That Match a Pattern II",
     "link": "https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii",
     "difficulty": "Hard",
     "topics": ["Array", "Rolling Hash", "String Matching", "Hash Function"]
   },
   {
-    "id": 577,
+    "id": "577",
     "title": "Valid Parentheses",
     "link": "https://leetcode.com/problems/valid-parentheses",
     "difficulty": "Easy",
     "topics": ["String", "Stack"]
   },
   {
-    "id": 578,
+    "id": "578",
     "title": "Longest Increasing Subsequence",
     "link": "https://leetcode.com/problems/longest-increasing-subsequence",
     "difficulty": "Medium",
     "topics": ["Array", "Binary Search", "Dynamic Programming"]
   },
   {
-    "id": 579,
+    "id": "579",
     "title": "Linked List Cycle",
     "link": "https://leetcode.com/problems/linked-list-cycle",
     "difficulty": "Easy",
     "topics": ["Hash Table", "Linked List", "Two Pointers"]
   },
   {
-    "id": 580,
+    "id": "580",
     "title": "Reverse Nodes in k-Group",
     "link": "https://leetcode.com/problems/reverse-nodes-in-k-group",
     "difficulty": "Hard",
     "topics": ["Linked List", "Recursion"]
   },
   {
-    "id": 581,
+    "id": "581",
     "title": "Restore IP Addresses",
     "link": "https://leetcode.com/problems/restore-ip-addresses",
     "difficulty": "Medium",
     "topics": ["String", "Backtracking"]
   },
   {
-    "id": 582,
+    "id": "582",
     "title": "Product of Array Except Self",
     "link": "https://leetcode.com/problems/product-of-array-except-self",
     "difficulty": "Medium",
     "topics": ["Array", "Prefix Sum"]
   },
   {
-    "id": 583,
+    "id": "583",
     "title": "Distribute Elements Into Two Arrays I",
     "link": "https://leetcode.com/problems/distribute-elements-into-two-arrays-i",
     "difficulty": "Easy",
     "topics": ["Array", "Simulation"]
   },
   {
-    "id": 584,
+    "id": "584",
     "title": "Distribute Elements Into Two Arrays II",
     "link": "https://leetcode.com/problems/distribute-elements-into-two-arrays-ii",
     "difficulty": "Hard",
     "topics": ["Array", "Binary Indexed Tree", "Segment Tree", "Simulation"]
   },
   {
-    "id": 585,
+    "id": "585",
     "title": "Count Prefix and Suffix Pairs I",
     "link": "https://leetcode.com/problems/count-prefix-and-suffix-pairs-i",
     "difficulty": "Easy",
     "topics": ["Array", "String", "Trie", "Rolling Hash", "String Matching", "Hash Function"]
   },
   {
-    "id": 586,
+    "id": "586",
     "title": "Count Prefix and Suffix Pairs II",
     "link": "https://leetcode.com/problems/count-prefix-and-suffix-pairs-ii",
     "difficulty": "Hard",
     "topics": ["Array", "String", "Trie", "Rolling Hash", "String Matching", "Hash Function"]
   },
   {
-    "id": 587,
+    "id": "587",
     "title": "Valid Sudoku",
     "link": "https://leetcode.com/problems/valid-sudoku",
     "difficulty": "Medium",
     "topics": ["Array", "Hash Table", "Matrix"]
   },
   {
-    "id": 588,
+    "id": "588",
     "title": "Block Placement Queries",
     "link": "https://leetcode.com/problems/block-placement-queries",
     "difficulty": "Hard",
     "topics": ["Array", "Binary Search", "Binary Indexed Tree", "Segment Tree"]
   },
   {
-    "id": 589,
+    "id": "589",
     "title": "Search in Rotated Sorted Array",
     "link": "https://leetcode.com/problems/search-in-rotated-sorted-array",
     "difficulty": "Medium",
     "topics": ["Array", "Binary Search"]
   },
   {
-    "id": 590,
+    "id": "590",
     "title": "Letter Combinations of a Phone Number",
     "link": "https://leetcode.com/problems/letter-combinations-of-a-phone-number",
     "difficulty": "Medium",
     "topics": ["Hash Table", "String", "Backtracking"]
   },
   {
-    "id": 591,
+    "id": "591",
     "title": "Longest Palindromic Substring",
     "link": "https://leetcode.com/problems/longest-palindromic-substring",
     "difficulty": "Medium",
     "topics": ["Two Pointers", "String", "Dynamic Programming"]
   },
   {
-    "id": 592,
+    "id": "592",
     "title": "3Sum",
     "link": "https://leetcode.com/problems/3sum",
     "difficulty": "Medium",
     "topics": ["Array", "Two Pointers", "Sorting"]
   },
   {
-    "id": 593,
+    "id": "593",
     "title": "Minimum Size Subarray Sum",
     "link": "https://leetcode.com/problems/minimum-size-subarray-sum",
     "difficulty": "Medium",
     "topics": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"]
   },
   {
-    "id": 594,
+    "id": "594",
     "title": "LRU Cache",
     "link": "https://leetcode.com/problems/lru-cache",
     "difficulty": "Medium",
     "topics": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"]
   }
-]
-
+  ]
 }
