@@ -13,26 +13,27 @@ export default function ThemeToggle() {
   }, [])
 
   if (!mounted) {
+    // Render placeholder to avoid hydration mismatch
     return (
-      <Button variant="ghost" size="sm" className="w-9 h-9 p-0">
-        <div className="w-4 h-4" />
-      </Button>
+      <div className="w-9 h-9 rounded-md bg-transparent" />
     )
   }
+
+  const isDark = theme === 'dark'
 
   return (
     <Button
       variant="ghost"
-      size="sm"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="w-9 h-9 p-0 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+      size="icon"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className="w-9 h-9 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center justify-center"
     >
-      {theme === 'dark' ? (
-        <Sun className="w-4 h-4 text-yellow-500 transition-all" />
+      {isDark ? (
+        <Sun className="w-5 h-5 text-yellow-500 transition-transform duration-300 rotate-0 hover:rotate-12" />
       ) : (
-        <Moon className="w-4 h-4 text-gray-600 transition-all" />
+        <Moon className="w-5 h-5 text-gray-600 dark:text-gray-300 transition-transform duration-300 rotate-0 hover:-rotate-12" />
       )}
-      <span className="sr-only">Toggle theme</span>
     </Button>
   )
 }

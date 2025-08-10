@@ -17,58 +17,82 @@ interface CompanyCardProps {
   }
 }
 
-export default function CompanyCard({ name, totalQuestions, solvedQuestions, difficulty }: CompanyCardProps) {
+export default function CompanyCard({
+  name,
+  totalQuestions,
+  solvedQuestions,
+  difficulty
+}: CompanyCardProps) {
   const getCompanyColor = (company: string) => {
     const colors = {
-      'Amazon': 'bg-orange-500',
-      'Google': 'bg-blue-500',
-      'Microsoft': 'bg-green-500',
-      'Meta': 'bg-blue-600',
-      'Apple': 'bg-gray-800',
-      'Netflix': 'bg-red-500',
+      Amazon: 'from-orange-500 to-orange-600',
+      Google: 'from-blue-500 to-blue-600',
+      Microsoft: 'from-green-500 to-green-600',
+      Meta: 'from-blue-600 to-blue-700',
+      Apple: 'from-gray-700 to-gray-900',
+      Netflix: 'from-red-500 to-red-600'
     }
-    return colors[company as keyof typeof colors] || 'bg-gray-500'
+    return colors[company as keyof typeof colors] || 'from-gray-500 to-gray-700'
   }
 
   const getCompanyIcon = (company: string) => {
-    // In a real app, you'd use actual company logos
-    return <Building2 className="w-8 h-8 text-white" />
+    // Replace with actual SVG/logo for production
+    return <Building2 className="w-7 h-7 text-white opacity-90" />
   }
 
   return (
-    <Card className="group hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+    <Card className="group hover:shadow-lg dark:hover:shadow-xl hover:border-indigo-400 dark:hover:border-indigo-500 transition-all duration-300 hover:-translate-y-1 bg-white/80 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 backdrop-blur-sm">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className={`w-12 h-12 rounded-xl ${getCompanyColor(name)} flex items-center justify-center`}>
+            <div
+              className={`w-12 h-12 rounded-xl bg-gradient-to-br ${getCompanyColor(
+                name
+              )} flex items-center justify-center shadow-sm`}
+            >
               {getCompanyIcon(name)}
             </div>
             <div>
-              <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">{name}</CardTitle>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{totalQuestions} Questions</p>
+              <CardTitle className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                {name}
+              </CardTitle>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {totalQuestions} Questions
+              </p>
             </div>
           </div>
         </div>
       </CardHeader>
+
       <CardContent className="space-y-4">
         <ProgressBar current={solvedQuestions} total={totalQuestions} />
-        
+
         <div className="flex flex-wrap gap-2">
-          <Badge variant="outline" className="text-green-600 dark:text-green-400 border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20">
+          <Badge
+            variant="outline"
+            className="text-green-600 dark:text-green-400 border-green-300/50 dark:border-green-800 bg-green-50/70 dark:bg-green-900/20"
+          >
             Easy: {difficulty.easy}
           </Badge>
-          <Badge variant="outline" className="text-yellow-600 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/20">
+          <Badge
+            variant="outline"
+            className="text-yellow-600 dark:text-yellow-400 border-yellow-300/50 dark:border-yellow-800 bg-yellow-50/70 dark:bg-yellow-900/20"
+          >
             Medium: {difficulty.medium}
           </Badge>
-          <Badge variant="outline" className="text-red-600 dark:text-red-400 border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20">
+          <Badge
+            variant="outline"
+            className="text-red-600 dark:text-red-400 border-red-300/50 dark:border-red-800 bg-red-50/70 dark:bg-red-900/20"
+          >
             Hard: {difficulty.hard}
           </Badge>
         </div>
 
         <Link href={`/company/${name.toLowerCase()}`} className="block">
-          <Button 
-            className="w-full group-hover:bg-primary/90 transition-colors"
+          <Button
+            className="w-full group-hover:bg-indigo-600 group-hover:text-white transition-all"
             size="lg"
+            variant="secondary"
           >
             <span>View Questions</span>
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

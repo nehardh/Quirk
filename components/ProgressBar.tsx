@@ -1,4 +1,7 @@
 'use client'
+
+import { useMemo } from 'react'
+
 interface ProgressBarProps {
   current: number
   total: number
@@ -8,19 +11,29 @@ interface ProgressBarProps {
 export default function ProgressBar({ current, total, className = '' }: ProgressBarProps) {
   const percentage = total > 0 ? (current / total) * 100 : 0
 
+  // Decide color dynamically based on completion
+  const progressColor = useMemo(() => {
+    if (percentage >= 75) return 'from-green-500 to-emerald-500'
+    if (percentage >= 40) return 'from-yellow-500 to-amber-500'
+    return 'from-red-500 to-pink-500'
+  }, [percentage])
+
   return (
     <div className={`w-full ${className}`}>
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+      {/* Top Info */}
+      <div className="flex justify-between items-center mb-1.5">
+        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 tracking-wide">
           {current} / {total} solved
         </span>
-        <span className="text-sm text-gray-500 dark:text-gray-400">
+        <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
           {Math.round(percentage)}%
         </span>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+
+      {/* Progress Bar Track */}
+      <div className="w-full bg-gray-200 dark:bg-gray-700/60 rounded-full h-2 overflow-hidden">
         <div
-          className="bg-gradient-to-r from-green-500 to-blue-500 dark:from-green-400 dark:to-blue-400 h-2.5 rounded-full transition-all duration-500 ease-out"
+          className={`bg-gradient-to-r ${progressColor} h-2 rounded-full transition-all duration-700 ease-out`}
           style={{ width: `${percentage}%` }}
         />
       </div>

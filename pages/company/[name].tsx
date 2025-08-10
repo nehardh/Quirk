@@ -31,16 +31,15 @@ export default function CompanyPage() {
   const [selectedTopic, setSelectedTopic] = useState('all')
   const [selectedStatus, setSelectedStatus] = useState('all')
 
-const questions: Question[] = companyName
-  ? (companyData[companyName.charAt(0).toUpperCase() + companyName.slice(1) as keyof typeof companyData] || []).map(q => ({
-      ...q,
-      difficulty: q.difficulty as 'Easy' | 'Medium' | 'Hard',
-    }))
-  : []
+  const questions: Question[] = companyName
+    ? (companyData[companyName.charAt(0).toUpperCase() + companyName.slice(1) as keyof typeof companyData] || []).map(q => ({
+        ...q,
+        difficulty: q.difficulty as 'Easy' | 'Medium' | 'Hard',
+      }))
+    : []
 
   useEffect(() => {
     if (!companyName) return
-
     const saved = localStorage.getItem('leetcode-tracker-solved')
     if (saved) {
       const parsed = JSON.parse(saved)
@@ -53,7 +52,6 @@ const questions: Question[] = companyName
 
   const toggleQuestion = (questionId: string) => {
     if (!companyName) return
-
     const newSolved = new Set(solvedQuestions)
     if (newSolved.has(questionId)) {
       newSolved.delete(questionId)
@@ -62,7 +60,6 @@ const questions: Question[] = companyName
     }
     setSolvedQuestions(newSolved)
 
-    // Save to localStorage
     const saved = localStorage.getItem('leetcode-tracker-solved')
     const parsed = saved ? JSON.parse(saved) : {}
     const companyKey = companyName.charAt(0).toUpperCase() + companyName.slice(1)
@@ -72,25 +69,19 @@ const questions: Question[] = companyName
 
   const availableTopics = useMemo(() => {
     const topics = new Set<string>()
-    questions.forEach(q => {
-      q.topics.forEach(topic => topics.add(topic))
-    })
+    questions.forEach(q => q.topics.forEach(topic => topics.add(topic)))
     return Array.from(topics).sort()
   }, [questions])
 
   const filteredQuestions = useMemo(() => {
     return questions.filter(question => {
       const matchesSearch = question.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          question.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase()))
-      
+        question.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase()))
       const matchesDifficulty = selectedDifficulty === 'all' || question.difficulty === selectedDifficulty
-      
       const matchesTopic = selectedTopic === 'all' || question.topics.includes(selectedTopic)
-      
-      const matchesStatus = selectedStatus === 'all' || 
-                           (selectedStatus === 'solved' && solvedQuestions.has(question.id)) ||
-                           (selectedStatus === 'unsolved' && !solvedQuestions.has(question.id))
-
+      const matchesStatus = selectedStatus === 'all' ||
+        (selectedStatus === 'solved' && solvedQuestions.has(question.id)) ||
+        (selectedStatus === 'unsolved' && !solvedQuestions.has(question.id))
       return matchesSearch && matchesDifficulty && matchesTopic && matchesStatus
     })
   }, [questions, searchTerm, selectedDifficulty, selectedTopic, selectedStatus, solvedQuestions])
@@ -98,7 +89,6 @@ const questions: Question[] = companyName
   const stats = useMemo(() => {
     const difficulties = { easy: 0, medium: 0, hard: 0 }
     const solvedDifficulties = { easy: 0, medium: 0, hard: 0 }
-    
     questions.forEach(q => {
       const difficulty = q.difficulty.toLowerCase() as keyof typeof difficulties
       difficulties[difficulty]++
@@ -106,7 +96,6 @@ const questions: Question[] = companyName
         solvedDifficulties[difficulty]++
       }
     })
-
     return {
       total: questions.length,
       solved: solvedQuestions.size,
@@ -127,10 +116,10 @@ const questions: Question[] = companyName
   if (!companyName || !questions.length) {
     return (
       <SessionProvider>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Company Not Found</h1>
-            <p className="text-gray-600 mb-4">The company you're looking for doesn't exist.</p>
+            <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Company Not Found</h1>
+            <p className="text-gray-500 dark:text-gray-400 mb-4">The company you're looking for doesn't exist.</p>
             <Link href="/">
               <Button>Go Home</Button>
             </Link>
@@ -145,24 +134,25 @@ const questions: Question[] = companyName
   return (
     <SessionProvider>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+        
         {/* Header */}
-        <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
+        <header className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/60 dark:border-gray-700/60 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center gap-4">
                 <Link href="/">
-                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                  <Button variant="ghost" size="sm" className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800">
                     <ArrowLeft className="w-4 h-4" />
-                    <span>Back</span>
+                    <span className="hidden sm:inline">Back</span>
                   </Button>
                 </Link>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center ring-2 ring-blue-300/40 dark:ring-blue-700/40">
                     <Building2 className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h1 className="text-xl font-bold text-gray-900 dark:text-white">{displayCompanyName}</h1>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{questions.length} Questions</p>
+                    <h1 className="text-lg font-semibold text-gray-900 dark:text-white tracking-tight">{displayCompanyName}</h1>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{questions.length} Questions</p>
                   </div>
                 </div>
               </div>
@@ -174,57 +164,48 @@ const questions: Question[] = companyName
         {/* Stats Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center space-x-2">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-gray-600 dark:text-gray-400 flex items-center gap-2">
                   <Target className="w-4 h-4" />
-                  <span>Overall Progress</span>
+                  Overall Progress
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ProgressBar current={stats.solved} total={stats.total} />
               </CardContent>
             </Card>
-
-            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-green-600 flex items-center space-x-2">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-green-500 flex items-center gap-2">
                   <Trophy className="w-4 h-4" />
-                  <span>Easy</span>
+                  Easy
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-green-600">
-                  {stats.solvedDifficulties.easy}/{stats.difficulties.easy}
-                </div>
+                <div className="text-2xl font-bold text-green-500">{stats.solvedDifficulties.easy}/{stats.difficulties.easy}</div>
               </CardContent>
             </Card>
-
-            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-yellow-600 flex items-center space-x-2">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-yellow-500 flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  <span>Medium</span>
+                  Medium
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-yellow-600">
-                  {stats.solvedDifficulties.medium}/{stats.difficulties.medium}
-                </div>
+                <div className="text-2xl font-bold text-yellow-500">{stats.solvedDifficulties.medium}/{stats.difficulties.medium}</div>
               </CardContent>
             </Card>
-
-            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium text-red-600 flex items-center space-x-2">
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm font-medium text-red-500 flex items-center gap-2">
                   <Target className="w-4 h-4" />
-                  <span>Hard</span>
+                  Hard
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-red-600">
-                  {stats.solvedDifficulties.hard}/{stats.difficulties.hard}
-                </div>
+                <div className="text-2xl font-bold text-red-500">{stats.solvedDifficulties.hard}/{stats.difficulties.hard}</div>
               </CardContent>
             </Card>
           </div>
@@ -245,32 +226,19 @@ const questions: Question[] = companyName
           />
 
           {/* Questions List */}
-          <div className="mt-8">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Questions ({filteredQuestions.length})
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {filteredQuestions.map((question) => (
-                <QuestionCard
-                  key={question.id}
-                  question={question}
-                  isChecked={solvedQuestions.has(question.id)}
-                  onToggle={toggleQuestion}
-                />
-              ))}
-            </div>
-
+          <div className="mt-8 space-y-4">
+            {filteredQuestions.map((question) => (
+              <QuestionCard
+                key={question.id}
+                question={question}
+                isChecked={solvedQuestions.has(question.id)}
+                onToggle={toggleQuestion}
+              />
+            ))}
             {filteredQuestions.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 dark:text-gray-400">No questions match your current filters.</p>
-                <Button 
-                  variant="outline" 
-                  className="mt-4"
-                  onClick={clearFilters}
-                >
+                <Button variant="outline" className="mt-4" onClick={clearFilters}>
                   Clear Filters
                 </Button>
               </div>
