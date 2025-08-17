@@ -3989,6 +3989,211 @@
     "topics": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"]
   }
   ],
+  "Cognizant": [
+    {
+      "id": "770",
+      "title": "Second Highest Salary",
+      "difficulty": "Medium",
+      "topics": ["Database"],
+      "url": "https://leetcode.com/problems/second-highest-salary"
+    },
+    {
+      "id": "771",
+      "title": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "topics": ["Array", "Binary Search", "Divide and Conquer"],
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays"
+    },
+    {
+      "id": "772",
+      "title": "Palindrome Number",
+      "difficulty": "Easy",
+      "topics": ["Math"],
+      "url": "https://leetcode.com/problems/palindrome-number"
+    },
+    {
+      "id": "773",
+      "title": "Count Subarrays of Length Three With a Condition",
+      "difficulty": "Easy",
+      "topics": ["Array"],
+      "url": "https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition"
+    },
+    {
+      "id": "774",
+      "title": "Longest Palindromic Substring",
+      "difficulty": "Medium",
+      "topics": ["Two Pointers", "String", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/longest-palindromic-substring"
+    },
+    {
+      "id": "775",
+      "title": "Remove Duplicates from Sorted Array",
+      "difficulty": "Easy",
+      "topics": ["Array", "Two Pointers"],
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array"
+    },
+    {
+      "id": "776",
+      "title": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "topics": ["Hash Table", "String", "Sliding Window"],
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters"
+    },
+    {
+      "id": "777",
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "topics": ["Hash Table", "String", "Sorting"],
+      "url": "https://leetcode.com/problems/valid-anagram"
+    },
+    {
+      "id": "778",
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topics": ["Array", "Hash Table"],
+      "url": "https://leetcode.com/problems/two-sum"
+    },
+    {
+      "id": "779",
+      "title": "Fibonacci Number",
+      "difficulty": "Easy",
+      "topics": ["Math", "Dynamic Programming", "Recursion", "Memoization"],
+      "url": "https://leetcode.com/problems/fibonacci-number"
+    },
+    {
+      "id": "780",
+      "title": "Longest Common Prefix",
+      "difficulty": "Easy",
+      "topics": ["String", "Trie"],
+      "url": "https://leetcode.com/problems/longest-common-prefix"
+    },
+    {
+      "id": "781",
+      "title": "Managers with at Least 5 Direct Reports",
+      "difficulty": "Medium",
+      "topics": ["Database"],
+      "url": "https://leetcode.com/problems/managers-with-at-least-5-direct-reports"
+    },
+    {
+      "id": "782",
+      "title": "Maximum Subarray",
+      "difficulty": "Medium",
+      "topics": ["Array", "Divide and Conquer", "Dynamic Programming"],
+      "url": "https://leetcode.com/problems/maximum-subarray"
+    },
+    {
+      "id": "783",
+      "title": "Reverse Integer",
+      "difficulty": "Medium",
+      "topics": ["Math"],
+      "url": "https://leetcode.com/problems/reverse-integer"
+    },
+    {
+      "id": "784",
+      "title": "Smallest Value of the Rearranged Number",
+      "difficulty": "Medium",
+      "topics": ["Math", "Sorting"],
+      "url": "https://leetcode.com/problems/smallest-value-of-the-rearranged-number"
+    },
+    {
+      "id": "785",
+      "title": "Product Sales Analysis I",
+      "difficulty": "Easy",
+      "topics": ["Database"],
+      "url": "https://leetcode.com/problems/product-sales-analysis-i"
+    },
+    {
+      "id": "786",
+      "title": "Merge Sorted Array",
+      "difficulty": "Easy",
+      "topics": ["Array", "Two Pointers", "Sorting"],
+      "url": "https://leetcode.com/problems/merge-sorted-array"
+    },
+    {
+      "id": "787",
+      "title": "Count Primes",
+      "difficulty": "Medium",
+      "topics": ["Array", "Math", "Enumeration", "Number Theory"],
+      "url": "https://leetcode.com/problems/count-primes"
+    },
+    {
+      "id": "788",
+      "title": "3Sum",
+      "difficulty": "Medium",
+      "topics": ["Array", "Two Pointers", "Sorting"],
+      "url": "https://leetcode.com/problems/3sum"
+    },
+    {
+      "id": "789",
+      "title": "Happy Number",
+      "difficulty": "Easy",
+      "topics": ["Hash Table", "Math", "Two Pointers"],
+      "url": "https://leetcode.com/problems/happy-number"
+    },
+    {
+      "id": "790",
+      "title": "Move Zeroes",
+      "difficulty": "Easy",
+      "topics": ["Array", "Two Pointers"],
+      "url": "https://leetcode.com/problems/move-zeroes"
+    },
+    {
+      "id": "791",
+      "title": "Binary Search",
+      "difficulty": "Easy",
+      "topics": ["Array", "Binary Search"],
+      "url": "https://leetcode.com/problems/binary-search"
+    },
+    {
+      "id": "792",
+      "title": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "topics": ["Linked List", "Recursion"],
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists"
+    },
+    {
+      "id": "793",
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "topics": ["String", "Stack"],
+      "url": "https://leetcode.com/problems/valid-parentheses"
+    },
+    {
+      "id": "794",
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "topics": ["Linked List", "Math", "Recursion"],
+      "url": "https://leetcode.com/problems/add-two-numbers"
+    },
+    {
+      "id": "795",
+      "title": "Fizz Buzz",
+      "difficulty": "Easy",
+      "topics": ["Math", "String", "Simulation"],
+      "url": "https://leetcode.com/problems/fizz-buzz"
+    },
+    {
+      "id": "796",
+      "title": "Rising Temperature",
+      "difficulty": "Easy",
+      "topics": ["Database"],
+      "url": "https://leetcode.com/problems/rising-temperature"
+    },
+    {
+      "id": "797",
+      "title": "Students and Examinations",
+      "difficulty": "Easy",
+      "topics": ["Database"],
+      "url": "https://leetcode.com/problems/students-and-examinations"
+    },
+    {
+      "id": "798",
+      "title": "Search Insert Position",
+      "difficulty": "Easy",
+      "topics": ["Array", "Binary Search"],
+      "url": "https://leetcode.com/problems/search-insert-position"
+    }
+  ],
   "Microsoft": [
   {
     "id": "595",
