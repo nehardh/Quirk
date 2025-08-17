@@ -6,7 +6,7 @@
       "difficulty": "Medium",
       "topics": ["Array", "Matrix", "Simulation"],
       "url": "https://leetcode.com/problems/spiral-matrix"
-    },
+    }, 
     {
       "id": "2",
       "title": "Rotate Image",
